@@ -1,0 +1,6 @@
+R key = Repeat Button
+888, 663 1075, 736
+
+Challenge screen after results screen
+R key = Ok button
+Range check on Ok button = 1027, 684, 1168, 732

@@ -1,0 +1,9 @@
+free chest button check
+1072, 248 1126, 278
+Choose buy with ? button
+Wait 5 seconds
+
+exit chest after buy button
+1210, 687 1243, 721
+Return to chest screen with Esc
+2xEsc to return to main menu

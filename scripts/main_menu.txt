@@ -1,0 +1,10 @@
+Inbox with mail check
+1119, 40 1154, 81
+
+Claim All Button = Y key
+Ok button (Claim All) = Possibly E, otherwise U key
+Ok button (Claim prompt) = Possibly E, othwerise U key
+Mission Button = R key
+
+Ok button (prompts)
+Range = 650, 546 835, 610
