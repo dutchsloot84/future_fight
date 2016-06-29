@@ -4,3 +4,7 @@ Sikuli Script is packed in a JAR file - sikuli-script.jar. Depending on the oper
 
 Windows, Linux: Sikuli-IDE/sikuli-script.jar
 Mac OS X: Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar
+
+Full instructions here:
+
+http://doc.sikuli.org/faq/030-java-dev.html
