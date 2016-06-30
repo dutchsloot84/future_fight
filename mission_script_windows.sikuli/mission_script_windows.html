@@ -70,16 +70,31 @@
 <h2>mission_script_windows.sikuli</h2> <a href="mission_script_windows.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-x = <span class="dig">0</span>
-<span class="cmt"># need screen for low energy, lowEnergy = find(???)</span>
+lowEnergy = exists(<img src="1467321494644.png" />)
 missionEnd = <span class="dig">0</span>
-<span class="kw">while</span> x &lt;= <span class="dig">35</span>:
+
+<span class="kw">def</span> rechargeEnergyIfFree():
+    <span class="kw">if</span> exists(<img src="1467322124639.png" />, <span class="dig">5</span>):
+        <span class="skw">click</span>(<img src="1467322124639.png" />)
+    <span class="kw">if</span> exists(<img src="1467322223525.png" />, <span class="dig">15</span>):
+        <span class="skw">click</span>(<img src="1467322223525.png" />)
+    <span class="kw">if</span> exists(<img src="1467322499864.png" />, <span class="dig">15</span>):
+        <span class="skw">click</span>(<img src="1467322499864.png" />)
+    <span class="kw">if</span> exists(<img src="1467323163474.png" />, <span class="dig">10</span>):
+        <span class="skw">click</span>(<img src="1467323163474.png" />)
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="skw">type</span>(Key.ESC)
+
+<span class="kw">while</span> <span class="kw">not</span> lowEnergy:
     exists(<img src="1467144561903.png" />, <span class="dig">15</span>)
     <span class="skw">click</span>(<img src="1467144561903.png" />)
+    <span class="kw">if</span> exists(<img src="1467321494644.png" />, <span class="dig">5</span>):
+        <span class="cmt">#Break out of loop due to low energy</span>
+        <span class="kw">break</span>
     <span class="kw">while</span> missionEnd &lt;= <span class="dig">26</span>:
-        <span class="skw">sleep</span>(<span class="dig">10</span>)
         <span class="kw">if</span> exists(<img src="1467144845807.png" />, <span class="dig">10</span>):
             <span class="cmt">#Check for Shield Lvl prompt</span>
+            <span class="cmt">#TODO: Create a prompt check function</span>
             <span class="kw">if</span> exists(<img src="1467154405580.png" />, <span class="dig">5</span>):
                 <span class="skw">click</span>(<img src="1467154405580.png" />)
             <span class="cmt">#Check for Dimension Rift prompt</span>
@@ -98,6 +113,8 @@ missionEnd = <span class="dig">0</span>
     <span class="kw">if</span> exists(<img src="1467154405580.png" />, <span class="dig">15</span>):
         <span class="skw">click</span>(<img src="1467154405580.png" />)
 x+=<span class="dig">1</span>
+
+rechargeEnergyIfFree()
 </pre>
 </body>
 </html>
